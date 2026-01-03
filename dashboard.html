@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Met Uni Student Portal - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <p id="welcomeMessage">Welcome, loading...</p>
+
+        <div class="dashboard-sections">
+            <section>
+                <h2>My Timetable</h2>
+                <p>View your class schedule here.</p>
+                <button>Go to Timetable</button>
+            </section>
+
+            <section>
+                <h2>My Grades</h2>
+                <p>Check your latest results.</p>
+                <button>View Grades</button>
+            </section>
+
+            <section>
+                <h2>Announcements</h2>
+                <p>Important updates from the university.</p>
+                <button>Read Announcements</button>
+            </section>
+        </div>
+
+        <button id="signOutBtn">Sign Out</button>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+
+    <!-- Config and dashboard script -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

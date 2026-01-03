@@ -6,13 +6,13 @@ document.getElementById('signInForm').addEventListener('submit', (e) => {
     const errorMessage = document.getElementById('errorMessage');
 
     firebase.auth().signInWithEmailAndPassword(email, password)
+        // Inside the .then() after successful sign-in
         .then((userCredential) => {
-            // Signed in successfully
             const user = userCredential.user;
             console.log('User signed in:', user);
-            errorMessage.textContent = ''; // Clear errors
-            // Redirect to dashboard or next page (e.g., window.location.href = 'dashboard.html';)
-            alert('Sign-in successful! Redirecting to dashboard...');
+            errorMessage.textContent = '';
+            // Redirect to dashboard
+            window.location.href = 'dashboard.html';
         })
         .catch((error) => {
             const errorCode = error.code;
